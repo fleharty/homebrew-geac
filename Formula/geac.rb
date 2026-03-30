@@ -1,12 +1,12 @@
 class Geac < Formula
   desc "Genomic Evidence Atlas of Cohorts — collect alt-base metrics and explore coverage"
   homepage "https://github.com/fleharty/GEAC"
-  version "0.3.14"
+  version "0.3.15"
 
   on_macos do
     on_arm do
       url "https://github.com/fleharty/GEAC/releases/download/v#{version}/geac-macos-arm64.tar.gz"
-      sha256 "1ccc741d2c94a0eb19b9caac1721fb460ed4c8314e22f471c1fbb79aa6007d26"
+      sha256 "1cfb151dbee77e598fb7e382c01e61ae1d93bd8a8b28f578eabdb2766a5c0f5f"
     end
   end
 
@@ -14,8 +14,8 @@ class Geac < Formula
   depends_on "python@3.12"
 
   resource "geac-apps" do
-    url "https://github.com/fleharty/GEAC/archive/refs/tags/v0.3.14.tar.gz"
-    sha256 "4dd182bd06a70361fca8f5ab7e27dc6555683b84398906bebf7ef7766bb354b5"
+    url "https://github.com/fleharty/GEAC/archive/refs/tags/v0.3.15.tar.gz"
+    sha256 "0485626436337d79cc1d57528a36501f863fb24bb8a50c8dee277e87c56f3816"
   end
 
   def install
@@ -39,11 +39,11 @@ class Geac < Formula
       "google-cloud-storage",
       "google-auth"
 
-    (bin/"geac-explorer").write <<~SH
+    (bin/"geac-cohort").write <<~SH
       #!/bin/bash
       exec "#{libexec}/venv/bin/streamlit" run "#{libexec}/geac_explorer.py" "$@"
     SH
-    chmod 0755, bin/"geac-explorer"
+    chmod 0755, bin/"geac-cohort"
 
     (bin/"geac-coverage-explorer").write <<~SH
       #!/bin/bash
