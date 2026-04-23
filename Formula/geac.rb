@@ -6,7 +6,7 @@ class Geac < Formula
   on_macos do
     on_arm do
       url "https://github.com/fleharty/GEAC/releases/download/v#{version}/geac-macos-arm64.tar.gz"
-      sha256 "338c65ff03422f8e12d63ad250efb5b2cd4d60ad3ce675ace680677e6f04891f"
+      sha256 "e01f95b3f83759820088a23e07288f6f8c3388876d8ddd6bf353d32a70b03feb"
     end
   end
 
@@ -15,7 +15,7 @@ class Geac < Formula
 
   resource "geac-apps" do
     url "https://github.com/fleharty/GEAC/archive/refs/tags/v0.4.17.tar.gz"
-    sha256 "24752a0f5cf7b2834c2eb8410d771af73a395d322e70dd339cef3d3985d6ae75"
+    sha256 "300df08a27c9b977cfcea0d15cd5bc2417bdac7c683b4701ad2f2c579b0ba71d"
   end
 
   def install
