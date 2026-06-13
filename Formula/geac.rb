@@ -1,12 +1,12 @@
 class Geac < Formula
   desc "Genomic Evidence Atlas of Cohorts — collect alt-base metrics and explore coverage"
   homepage "https://github.com/fleharty/GEAC"
-  version "0.4.45"
+  version "0.4.46"
 
   on_macos do
     on_arm do
       url "https://github.com/fleharty/GEAC/releases/download/v#{version}/geac-macos-arm64.tar.gz"
-      sha256 "d3d941319988ba6f0a7ee49914ce84e7bfcb4c1c19514330a3460c8ee85ef66e"
+      sha256 "7dc691d7e86a6edfa1229163c4f517f5db2eaee68afe74c0f5362201bd4588bd"
     end
   end
 
@@ -14,8 +14,8 @@ class Geac < Formula
   depends_on "python@3.12"
 
   resource "geac-apps" do
-    url "https://github.com/fleharty/GEAC/archive/refs/tags/v0.4.45.tar.gz"
-    sha256 "97f92aa0ba121e32d294864f54dc6623d3631bb04e18ef4b55ad958ed2c95748"
+    url "https://github.com/fleharty/GEAC/archive/refs/tags/v0.4.46.tar.gz"
+    sha256 "dfcc06c3d90af835bf4845e676d35ccc13a1f9b291c2b1e33feb3f3c48df4ad7"
   end
 
   def install
